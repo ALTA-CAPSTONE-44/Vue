@@ -6,13 +6,13 @@
       white
     >
 
-      <v-toolbar-title>Page title</v-toolbar-title>
+      <v-toolbar-title>VaccineHub</v-toolbar-title>
 
        <v-spacer></v-spacer> 
       <v-toolbar-title style="margin-left:20px;">
-      <nuxt-link to="/signin" style="margin-right:10px;">Beranda</nuxt-link> 
+      <nuxt-link to="/login" style="margin-right:10px;">Beranda</nuxt-link> 
       <nuxt-link to="#" style="margin-right:10px;">Statistik</nuxt-link>
-      <nuxt-link to="#" style="margin-right:10px;">Booking</nuxt-link> 
+      <nuxt-link to="/vaksinbooking" style="margin-right:10px;">Booking</nuxt-link> 
       <nuxt-link to="#">Tentang</nuxt-link>  
       </v-toolbar-title>
       <v-spacer></v-spacer> 
