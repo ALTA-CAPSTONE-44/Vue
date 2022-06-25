@@ -3,8 +3,6 @@
         <core-drawer />
     <core-app-bar />
         <core-view />
-
-
 </v-app>
 
 </template>

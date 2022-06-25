@@ -11,13 +11,10 @@
     >
 
 
-        <v-list-item two-line>
-            <v-list-item-avatar color="white">
-                <v-img src="https://cdn.vuetifyjs.com/images/logos/v.png" height="34" contain />
-            </v-list-item-avatar>
-            <v-list-item-title class="title">
-                Vaksin Booking
-            </v-list-item-title>
+        <v-list-item  class="py-8" >
+           
+                <v-img src="/img/logo.png"  style="width: 100px;" />
+          
         </v-list-item>
         <v-divider class="mx-3 mb-3" />
 
@@ -77,14 +74,11 @@ export default {
             
             {
                 to: '/user-profile',
-                icon: 'mdi-account',
-                text: 'Chat'
+                icon: 'mdi-setting',
+                text: 'Settings'
             },
-                {
-                to: '/user-profile',
-                icon: 'mdi-settings',
-                text: 'Setting'
-            },
+               
+            
         ],
     }),
     computed: {
