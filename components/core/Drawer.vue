@@ -34,10 +34,13 @@
             <v-list nav>
                 <v-list-item to="#">
                     <v-list-item-action>
-                        <v-icon>mdi-package-up</v-icon>
+                        <v-icon>mdi-logout</v-icon>
                     </v-list-item-action>
 
-                    <v-list-item-title class="font-weight-light">Something else</v-list-item-title>
+                    <v-button
+                     class="font-weight-light"
+                     outlined
+                     >Keluar</v-button>
                 </v-list-item>
             </v-list>
         </template>
@@ -57,24 +60,24 @@ export default {
     data: () => ({
         links: [
             {
-                to: '/',
+                to: '/admin/dashboard',
                 icon: 'mdi-view-dashboard',
                 text: 'Dashboard',
             },
             {
-                to: '/products',
+                to: '/admin/session',
                 icon: 'mdi-note-text',
                 text: 'Session',
             },
             {
                 to: '/user-profile',
-                icon: 'mdi-account',
+                icon: 'mdi-archive',
                 text: 'Stock'
             },
             
             {
                 to: '/user-profile',
-                icon: 'mdi-setting',
+                icon: 'mdi-cog',
                 text: 'Settings'
             },
                
