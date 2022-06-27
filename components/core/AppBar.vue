@@ -9,18 +9,104 @@
         <v-spacer />
         <v-toolbar-items>
             <v-row align="center" class="mx-0">
-                <v-text-field class="mr-4 purple-input" color="purple" label="Search..." hide-details />
-                <v-btn icon to="/" class="my-4">
-                    <v-icon color="tertiary" >mdi-view-dashboard</v-icon>
-                </v-btn>
-
+                <v-card-subtitle>Mulai tanggal</v-card-subtitle>
+                <v-col
+                cols="12"
+                sm="6"
+                md="4"
+                >
+                    <v-menu
+                        ref="menu"
+                        v-model="menu"
+                        :close-on-content-click="false"
+                        :return-value.sync="date"
+                        transition="scale-transition"
+                        offset-y
+                        min-width="auto"
+                    >
+                        <template v-slot:activator="{ on, attrs }">
+                            <v-text-field
+                                v-model="date"
+                                readonly
+                                v-bind="attrs"
+                                v-on="on"
+                            ></v-text-field>
+                        </template>
+                        <v-date-picker
+                        v-model="date"
+                        no-title
+                        scrollable
+                        >
+                        <v-spacer></v-spacer>
+                        <v-btn
+                            text
+                            color="primary"
+                            @click="menu = false"
+                        >
+                            Cancel
+                        </v-btn>
+                        <v-btn
+                            text
+                            color="primary"
+                            @click="$refs.menu.save(date)"
+                        >
+                            OK
+                        </v-btn>
+                    </v-date-picker>
+                </v-menu>
+            </v-col>
+            <v-icon>mdi-minus</v-icon>
+                <v-col
+                cols="12"
+                sm="6"
+                md="4"
+                >
+                    <v-menu
+                        ref="menu"
+                        v-model="menu"
+                        :close-on-content-click="false"
+                        :return-value.sync="date"
+                        transition="scale-transition"
+                        offset-y
+                        min-width="auto"
+                    >
+                        <template v-slot:activator="{ on, attrs }">
+                            <v-text-field
+                                v-model="date"
+                                readonly
+                                v-bind="attrs"
+                                v-on="on"
+                            ></v-text-field>
+                        </template>
+                        <v-date-picker
+                        v-model="date"
+                        no-title
+                        scrollable
+                        >
+                        <v-spacer></v-spacer>
+                        <v-btn
+                            text
+                            color="primary"
+                            @click="menu = false"
+                        >
+                            Cancel
+                        </v-btn>
+                        <v-btn
+                            text
+                            color="primary"
+                            @click="$refs.menu.save(date)"
+                        >
+                            OK
+                        </v-btn>
+                    </v-date-picker>
+                </v-menu>
+            </v-col>
                 <v-menu bottom left offset-y transition="slide-y-transition">
                     <template v-slot:activator="{attrs, on}">
                         <v-btn class="toolbar-items" icon v-bind="attrs" v-on="on">
                             <v-badge color="error" overlap>
                                 <template slot="badge">
                                  {{ notifications.length }}
-
                                 </template>
                             <v-icon color="tertiary">mdi-bell</v-icon>
 
@@ -35,9 +121,6 @@
                         </v-list>
                     </v-card>
                 </v-menu>
-               <v-btn to="/user-profile" icon>
-                    <v-icon color="tertiary">mdi-account</v-icon>
-               </v-btn>
             </v-row>
         </v-toolbar-items>
     </v-app-bar>
@@ -55,6 +138,10 @@ export default {
         ],
         responsive: false,
         title: null,
+        date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+        menu: false,
+        modal: false,
+        menu2: false,
     }),
     watch: {
         $route(val) {

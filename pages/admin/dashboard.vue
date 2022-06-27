@@ -4,45 +4,14 @@
     <v-col cols="8">
       <v-row>
         <v-col cols="12" class="mb-6">
-
-          <v-card
-            height="500"
-          >
+          <v-card height="500">
             <v-card-title>Total Penerima Vaksin</v-card-title>
           </v-card>
         </v-col>
         <v-col cols="6">
           <v-card height="250">
-            <v-card-title >Test</v-card-title>
-          </v-card>
-        </v-col>
-        
-        <v-col cols="6">
-          <v-card height="250">
-            <v-card-title >Test</v-card-title>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-col>
-    <v-col cols="4">
-      <v-row>
-        <v-col cols="12">
-          <v-card height="250">
-            <v-card-title>Test</v-card-title>
-          </v-card>  
-        </v-col>
-        
-        <v-col cols="12">
-          <v-card height="250">
-            <v-card-title>Test</v-card-title>
-          </v-card>  
-        </v-col>
-        
-        <v-col cols="12">
-          <v-card height="250" >
             <div  class="card-vact">
-             
-              <div class="sidee">
+              <div class="side">
                 <v-img src="/img/product.png"> </v-img>
               </div>
               <div>
@@ -56,9 +25,61 @@
                   08.00-12.00
                 </div>
               </div>
+            </div>
+          </v-card>
+        </v-col>
+        
+        <v-col cols="6">
+          <v-card height="250">
+            <div  class="card-vact">
+              <div class="side">
+                <v-img src="/img/product.png"> </v-img>
               </div>
-            
-          
+              <div>
+                <div class="text-md">
+                  Sesi 2
+                </div>
+                <div class="text-sm">
+                  Senin, 30 Mei 2022
+                </div>
+                <div class="text-sm">
+                  08.00-12.00
+                </div>
+              </div>
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-col>
+    <v-col cols="4">
+      <v-row>
+        <v-col cols="12">
+          <v-card height="250">
+            <v-card-title>Total Pengguna</v-card-title>
+            <div class="slice">
+              <img src="/img/iconvact.png" alt="iconvact" style="width: 82px" />
+              <div class="text-2xl">700</div>
+            </div>
+          </v-card>  
+        </v-col>
+        
+        <v-col cols="12">
+          <v-card height="250">
+            <v-card-title>Total Pendaftar</v-card-title>
+            <div class="slice">
+              <img src="/img/iconvact.png" alt="iconvact" style="width: 82px" />
+              <div class="text-2xl">700</div>
+            </div>
+          </v-card>  
+        </v-col>
+
+        <v-col cols="12">
+          <v-card height="250">
+            <v-card-title>Stok Vaksin</v-card-title>
+            <div class="slice">
+              <img src="/img/iconvact.png" alt="iconvact" style="width: 82px" />
+              <div class="text-2xl">700</div>
+            </div>
           </v-card>  
         </v-col>
       </v-row>

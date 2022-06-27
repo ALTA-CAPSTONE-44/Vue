@@ -71,13 +71,13 @@ export default {
       },
       {
         to: "/admin/Stock",
-        icon: "mdi-account",
+        icon: "mdi-archive",
         text: "Stock",
       },
 
       {
-        to: "/user-profile",
-        icon: "mdi-setting",
+        to: "",
+        icon: "mdi-cog",
         text: "Settings",
       },
     ],
