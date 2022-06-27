@@ -79,8 +79,8 @@
       outlined
     ></v-text-field>
     <div class="text-center mt-n5" style="text-align:center;">
-                        <v-btn color="teal accent-3" dark>Next</v-btn>
-                      </div>
+    <v-btn type="submit" color="teal accent-3" dark href="/vaksinbooking1">Next</v-btn>
+    </div>
         </v-form>
     </div>
     </div>

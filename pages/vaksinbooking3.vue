@@ -43,29 +43,28 @@
                       <v-card-text class="mt-12">
                         <h1 class="text-center display-2 --text text--accent-3" style="text-align:center; margin-top: 50px;">Booking Vaksin</h1>
                         <v-form>
-                         <h2 style="text-align:center; margin-top: 20px;">Untuk siapa pendaftaran vaksin</h2>
+                         <h2 style="margin-top: 20px; text-align: center;">Pilih sesi</h2>
                           <v-checkbox
                             v-model="ex4"
-                            label="Diri sendiri"
+                            label="Sesi 1"
                             color="primary"
-                            value="Diri sendiri"
+                            value="Vaksin Ke -1"
                             hide-details
-                            outlined
                             style="margin-left:110px;"
                         ></v-checkbox>
                           
                           <v-checkbox
                             v-model="ex4"
-                            label="Keluarga"
+                            label="sesi 2"
                             color="primary"
-                            value="Keluarga"
-                            hide-details
-                            style="margin-left:110px;"  
+                            value="Vaksin ke -2"
+                            hide-details 
+                            style="margin-left:110px;"
                         ></v-checkbox>
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5" style="text-align:center;">
-                        <v-btn color="teal accent-3" dark href="/vaksinbooking2">Next</v-btn>
+                        <v-btn color="teal accent-3" dark href="/vaksinbooking1">Next</v-btn>
                       </div>
                     </v-col>
                   </v-row>
