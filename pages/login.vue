@@ -31,10 +31,10 @@
                             outlined
                           />
                           <div style="margin-bottom:20px;">
-                          <nuxt-link to="#" style="float:right;"> lupa sandi ?</nuxt-link>
+                          <nuxt-link to="/resetpassword" style="float:right;"> lupa sandi ?</nuxt-link>
                           </div>
                           <div style="margin-bottom:20px; text-align:center; margin-left: 70px;" >
-                          <nuxt-link to="#" class="text-center"> Belum punya akun ? Register</nuxt-link>
+                          <nuxt-link to="/register" class="text-center"> Belum punya akun ? Register</nuxt-link>
                           </div>
                         </v-form>
                       </v-card-text>
