@@ -102,6 +102,42 @@
     <h1 style="padding-right:250px; margin-left:620px;margin-bottom: 40px; font-size: 25px;">Pemerataan vaksinasi hingga saat ini dilanjutkan untuk masyarakat umum dan terus berjalan hingga berhasil menjangkau seluruh warga negara Indonesia dan warga negara asing yang bertempat tinggal di Indonesia. </h1>
     <h1 style="padding-right:250px; margin-left:620px;margin-bottom: 40px; font-size: 25px;">Harapannya dengan upaya pemerataan vaksinasi ini, Indonesia dapat segera bangkit dan terbebas dari penyebaran virus Covid-19. </h1>
   </div>
+
+  <v-footer
+outlined
+    padless
+  >
+    <v-card
+      class="flex"
+      flat
+      tile
+    >
+      <v-card-title class="teal">
+        <strong class="subheading">VaccineHub</strong>
+        <div style="margin-left:200px;">
+          <p style="font-weight:bold">Syarat Kententuan</p>
+          <p style="font-weight:bold">Bantuan</p>
+          <p style="font-weight:bold">Tentang</p>
+        </div>
+         <div style="margin-left:200px;">
+          <strong>Pelayanan</strong>
+          <div style="display:block">
+          <p style="float:left">Booking Vaskisn</p>
+          <p style="float:right; margin-left: 20px;">Cetak Sertifikat</p>
+          </div>
+          <div style="display:inline-flex">
+          <p>Cek Lokasi</p>
+          <p style="float:right; margin-left: 65px;">Cek Lokasi</p>
+          </div>
+        </div>
+        <v-spacer></v-spacer>
+      </v-card-title>
+
+      <v-card-text class="py-2 white--text text-center">
+        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
   </div>
 </template>
 

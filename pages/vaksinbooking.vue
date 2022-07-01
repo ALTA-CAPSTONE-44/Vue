@@ -65,7 +65,7 @@
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5" style="text-align:center;">
-                        <v-btn color="teal accent-3" dark href="/vaksinbooking1">Next</v-btn>
+                        <v-btn color="teal accent-3" dark href="/vaksinbooking2">Next</v-btn>
                       </div>
                     </v-col>
                   </v-row>
