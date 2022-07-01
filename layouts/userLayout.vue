@@ -31,7 +31,9 @@
 
     </v-app-bar>
 
+  <div>
     <nuxt></nuxt>
+  </div>
 
   <v-footer
   outlined

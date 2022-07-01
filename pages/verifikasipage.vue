@@ -26,7 +26,7 @@
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5">
-                        <v-btn color="teal accent-3" dark>verifikasi Email</v-btn>
+                        <v-btn href="/" color="teal accent-3" dark>verifikasi Email</v-btn>
                       </div>
                     </v-col>
                   </v-row>

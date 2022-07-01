@@ -48,7 +48,7 @@
           ></v-text-field>
         </v-col>
       </v-row>
-      <v-btn type="submit" style="margin-left:300px;margin-top: 10px; width: 150px;">Cek Status</v-btn>
+      <v-btn href="/sertifikatvaksin" type="submit" style="margin-left:300px;margin-top: 10px; width: 150px;">Cek Status</v-btn>
     </v-card>
   </v-form>
   <div style="margin-bottom:20px;">

@@ -68,7 +68,7 @@
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5">
-                        <v-btn color="teal accent-3" dark>Login</v-btn>
+                        <v-btn href="verifikasipage" color="teal accent-3" dark>Register</v-btn>
                       </div>
                     </v-col>
                   </v-row>
