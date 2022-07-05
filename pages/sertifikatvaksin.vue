@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'SertifikatVaksin',
   layout: 'userLayout',
 }
 </script>

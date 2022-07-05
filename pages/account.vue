@@ -1,36 +1,5 @@
 <template>
   <div>
-    
-    <v-app-bar
-      color="deep-purple accent-4"
-      dense
-      white
-    >
-      <v-toolbar-title>VaccineHub</v-toolbar-title>
-
-       <v-spacer></v-spacer> 
-      <v-toolbar-title style="margin-left:20px;">
-      <nuxt-link to="/" style="margin-right:10px;">Beranda</nuxt-link> 
-      <nuxt-link to="#" style="margin-right:10px;">Statistik</nuxt-link>
-      <nuxt-link to="#" style="margin-right:10px;">Booking</nuxt-link> 
-      <nuxt-link to="#">Tentang</nuxt-link>  
-      </v-toolbar-title>
-      <v-spacer></v-spacer> 
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-       <v-btn depressed outlined>
-      <nuxt-link to="/login">Masuk</nuxt-link>
-    </v-btn>
-
-    </v-app-bar>
-
     <v-container>
    <div class="ma-10 pa-12" style="float:left">
     <v-card style="margin-right:150px; padding-right: 0px;">
@@ -108,8 +77,23 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+  name: 'AccountPage',
+  layout: 'userLayout',
 
+  async asyncData() {
+    const { data } = await axios.get('http://54.255.189.230:8888/users/{user_id}')
+    return {
+      user: data
+    }
+  },
+  
+  data() {
+    return {
+      user_id: this.$route.params.id
+    }
+  }
 }
 </script>
 

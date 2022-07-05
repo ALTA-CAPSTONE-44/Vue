@@ -65,7 +65,7 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'RiwayatTiketVaksin',
   layout: 'userLayout',
 }
 </script>

@@ -7,9 +7,9 @@
       <v-spacer></v-spacer> 
       <v-toolbar-title style="margin-left:20px;">
         <nuxt-link to="/" style="margin-right:40px;">Beranda</nuxt-link> 
-        <nuxt-link to="#" style="margin-right:40px;">Statistik</nuxt-link>
+        <nuxt-link to="#statistik" style="margin-right:40px;">Statistik</nuxt-link>
         <nuxt-link to="/vaksinbooking" style="margin-right:40px;">Booking</nuxt-link> 
-        <nuxt-link to="#">Tentang</nuxt-link>  
+        <nuxt-link to="#tentang">Tentang</nuxt-link>  
       </v-toolbar-title>
       <v-spacer></v-spacer> 
       <v-btn depressed outlined>
@@ -48,7 +48,7 @@
         </div>
         <div style="margin-left:150px">
           <p style="font-weight:bold">Unduh Aplikasi</p>
-          <v-btn width="120px" color="#2FC4B1">
+          <v-btn width="120px" color="#61E8DA">
             <v-icon>mdi-google-play</v-icon>
           </v-btn>
         </div>
@@ -70,7 +70,7 @@
 }
 
 .app-bar a:hover {
-  color: #2FC4B1; /* blue colors for links too */
+  color: #61E8DA; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
 }
 </style>

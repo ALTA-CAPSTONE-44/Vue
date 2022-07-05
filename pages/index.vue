@@ -2,16 +2,15 @@
 <div>
       <v-card>
         <v-img
-        class="align-start"
         height="350px"
-        src="../assets/VaccineHub-logo.png"
+        :src="require('../assets/VaccineHub-logo.png')"
         >
           <v-card-title>
             Langkah kecil ke arah yang benar lebih baik daripada langkah besar ke arah yang salah. Karena itu, <b>ayo ikut vaksin!</b>
           </v-card-title>
           <v-card-actions>
             <v-btn
-            color="#2FC4B1"
+            color="#61E8DA"
             >
               Pendaftaran vaksin >>
             </v-btn>
@@ -47,14 +46,13 @@
         </v-col>
       </v-row>
       <v-btn 
-      color="#2FC4B1"
-      href="/sertifikatvaksin"
+      color="#61E8DA"
       type="submit"
       style="margin-left:300px; margin-top: 10px; width: 150px;"
       >Cek Status</v-btn>
     </v-card>
   </v-form>
-  <div style="margin-bottom:20px;">
+  <div style="margin-bottom:20px;" id="statistik">
     <h1 style="margin-left:50px;">Statistik</h1>
   </div>
   <div style="margin-bottom:20px;">
@@ -109,7 +107,7 @@
       </v-col>
     </v-row>
   </div>
-  <div style="margin-bottom:20px;">
+  <div style="margin-bottom:20px;" id="tentang">
     <h1 style="margin-left:50px;">Tentang</h1>
   </div>
   <div class="berita1" style="margin-bottom:200px; display: flex;">

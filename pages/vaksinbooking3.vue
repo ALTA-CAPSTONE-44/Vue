@@ -46,7 +46,7 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'VaksinBooking3',
   layout: 'userLayout',
 }
 </script>
