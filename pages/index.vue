@@ -1,56 +1,114 @@
 <template>
 <div>
-  <v-row dense>
-    <v-col cols="12">
-      <v-card
-      color="#73777B"
-      dark
-      height="350"
-      >
-        <v-card-title class="text-h5" style="padding-right:1135px; color: black;">
-          Langkah kecil ke arah yang benar lebih baik daripada langkah besar ke arah yang salah. Karena itu, ayo ikut vaksin!
-        </v-card-title>
-        <v-card-actions>
-          <v-btn>
-            Pendaftaran vaksin >>
-          </v-btn>
-        </v-card-actions>
+      <v-card>
+        <v-img
+        class="align-start"
+        height="350px"
+        src="../assets/VaccineHub-logo.png"
+        >
+          <v-card-title>
+            Langkah kecil ke arah yang benar lebih baik daripada langkah besar ke arah yang salah. Karena itu, <b>ayo ikut vaksin!</b>
+          </v-card-title>
+          <v-card-actions>
+            <v-btn
+            color="#2FC4B1"
+            >
+              Pendaftaran vaksin >>
+            </v-btn>
+          </v-card-actions>
+        </v-img>
       </v-card>
-    </v-col>
-  </v-row>
   <v-form >
     <v-card style="margin-left:350px; margin-right:500px; display: absolute; bottom:100px; padding:20px; width: 800px;">
       <h2>Status Sertifikat Vaksin</h2>
       <h3 style="margin-bottom:20px;">Isi Nama Lengkap dan NIK anda</h3>
-      <div style="border-top:1px solid black; margin-bottom: 20px;">
-      </div>
       <v-row>
         <v-col
         cols="12"
         md="6"
         >
-        <p>Nama Lengkap</p>
-            <v-text-field
-              v-model="firstname"
-              required
-              outlined
-            ></v-text-field>
+          <v-text-field
+          label="Nama Lengkap"
+          v-model="firstname"
+          required
+          outlined
+          ></v-text-field>
         </v-col>
         <v-col
         cols="12"
         md="6"
         >
-          <p>NIK</p>
           <v-text-field
-          v-model="NIK"
+          label="NIK"
+          v-model="nik"
           required
           outlined
           ></v-text-field>
         </v-col>
       </v-row>
-      <v-btn href="/sertifikatvaksin" type="submit" style="margin-left:300px;margin-top: 10px; width: 150px;">Cek Status</v-btn>
+      <v-btn 
+      color="#2FC4B1"
+      href="/sertifikatvaksin"
+      type="submit"
+      style="margin-left:300px; margin-top: 10px; width: 150px;"
+      >Cek Status</v-btn>
     </v-card>
   </v-form>
+  <div style="margin-bottom:20px;">
+    <h1 style="margin-left:50px;">Statistik</h1>
+  </div>
+  <div style="margin-bottom:20px;">
+    <v-row style="margin-left:30px">
+      <v-col
+      cols="12"
+      sm="4"
+      >
+        <v-card width="400px">
+          <v-row>
+            <v-col>
+              <p>Pengguna Vaksin</p>
+              <p>200 Juta</p>
+            </v-col>
+            <v-col>
+              <img width="150px" src="../assets/statistic-1.png" >
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+      <v-col
+      cols="12"
+      sm="4"
+      >
+        <v-card width="400px">
+          <v-row>
+            <v-col>
+              <p>Pengguna Vaksin</p>
+              <p>200 Juta</p>
+            </v-col>
+            <v-col>
+              <img width="150px" src="../assets/statistic-1.png" >
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+      <v-col
+      cols="12"
+      sm="4"
+      >
+        <v-card width="400px">
+          <v-row>
+            <v-col>
+              <p>Pengguna Vaksin</p>
+              <p>200 Juta</p>
+            </v-col>
+            <v-col>
+              <img width="150px" src="../assets/statistic-1.png" >
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+    </v-row>
+  </div>
   <div style="margin-bottom:20px;">
     <h1 style="margin-left:50px;">Tentang</h1>
   </div>
@@ -76,5 +134,7 @@ export default {
 </script>
 
 <style>
-
+body {
+  font-family: 'Nunito', sans-serif;
+}
 </style>
