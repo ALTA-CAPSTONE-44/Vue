@@ -24,7 +24,12 @@
                 <div class="text-sm">
                   08.00-12.00
                 </div>
+               
+              <div class="text-sm">
+                Vaksin Sinovac
+                50/60
               </div>
+            </div>
             </div>
           </v-card>
         </v-col>
@@ -43,7 +48,7 @@
                   Senin, 30 Mei 2022
                 </div>
                 <div class="text-sm">
-                  08.00-12.00
+                  12.00-16.00
                 </div>
               </div>
             </div>
@@ -90,7 +95,10 @@
 </template>
 
 <script>
+import AppBar from '~/components/core/AppBar.vue'
+import Vaksinbooking from '../vaksinbooking.vue'
 export default {
+  components: { AppBar, Vaksinbooking },
   name: 'IndexPage',
   layout: 'adminLayout',
 }

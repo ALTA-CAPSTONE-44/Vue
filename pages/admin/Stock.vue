@@ -1,13 +1,14 @@
 <template>
   <v-container>
     <CardStockVaksin />
+    
 
-    <!-- <div style="margin-top: 40px" class="grid-vact">
+    <div style="margin-top: 40px" class="grid-vact">
       <CardStockVaksin2 />
       <CardStockVaksin2 />
       <CardStockVaksin2 />
       <CardStockVaksin2 />
-    </div> -->
+    </div>
 
     <div>
       <div class="text-xl my-6">Laporan pengambilan vaksin</div>
@@ -19,22 +20,46 @@
           <th style="border-radius: 8px">Jumlah</th>
         </tr>
         <tr>
-          <td class="td" style="border-radius: 8px">10001</td>
-          <td>Tom</td>
-          <td>M</td>
-          <td style="border-radius: 8px">30</td>
+          <td class="td" style="border-radius: 8px">01</td>
+          <td>10 Mei 2022</td>
+          <td>Sinovac</td>
+          <td style="border-radius: 8px">50</td>
         </tr>
         <tr>
-          <td class="td" style="border-radius: 8px">10002</td>
-          <td>Sally</td>
-          <td>F</td>
-          <td style="border-radius: 8px">28</td>
+          <td class="td" style="border-radius: 8px">02</td>
+          <td>10 Mei 2022</td>
+          <td>Sinovac</td>
+          <td style="border-radius: 8px">50</td>
         </tr>
         <tr>
-          <td class="td" style="border-radius: 8px">10003</td>
-          <td>Emma</td>
-          <td>F</td>
-          <td style="border-radius: 8px">24</td>
+          <td class="td" style="border-radius: 8px">03</td>
+          <td>10 Mei 2022</td>
+          <td>Sinovac</td>
+          <td style="border-radius: 8px">50</td>
+        </tr>
+         <tr>
+          <td class="td" style="border-radius: 8px">04</td>
+          <td>10 Mei 2022</td>
+          <td>Sinovac</td>
+          <td style="border-radius: 8px">50</td>
+        </tr>
+         <tr>
+          <td class="td" style="border-radius: 8px">05</td>
+          <td>10 Mei 2022</td>
+          <td>Sinovac</td>
+          <td style="border-radius: 8px">50</td>
+        </tr>
+         <tr>
+          <td class="td" style="border-radius: 8px">06</td>
+          <td>10 Mei 2022</td>
+          <td>Sinovac</td>
+          <td style="border-radius: 8px">50</td>
+        </tr>
+         <tr>
+          <td class="td" style="border-radius: 8px">07</td>
+          <td>10 Mei 2022</td>
+          <td>Sinovac</td>
+          <td style="border-radius: 8px">50</td>
         </tr>
       </table>
     </div>
