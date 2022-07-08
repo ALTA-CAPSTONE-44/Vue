@@ -65,7 +65,7 @@
         <div>Pembukaan Pendaftaran</div>
         <v-row>
           <v-col cols="12" sm="6" md="4">
-            <v-text-field label="Solo" class="py-lg-3" solo></v-text-field>
+            <v-text-field label="Senin, 1 Januari 2022" class="py-lg-3" Senin, 1 Januari 2022></v-text-field>
           </v-col>
 
           <v-col cols="12" sm="6" md="4">

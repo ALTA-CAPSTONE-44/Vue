@@ -17,16 +17,22 @@
           <CardStockVaksin2 vaksin="160" img="/img/Moderna Vaksin.png" />
       </v-col>
 
-      <v-col cols="3">
-          <CardStockVaksin2 vaksin="100" img="/img/Pfizer Vaksin.png" />
-      </v-col>
       <v-col cols="9">
         <v-card>
           <v-row justify="center">
-            <v-col lg="12" md="12" class="d-flex justify-end">
-              <v-btn class="ml-4 mb-4 mt-4 mr-6" color="blue" dark>
+            <v-col lg="12" md="12" >
+              <v-row class="d-flex justify-end">
+                <v-col cols="3"> 
+              <v-btn class="ml-4 mb-4 mt-3 mr-6" color="blue" dark>
                 <v-icon>mdi-plus</v-icon> Tambah Stock Baru
               </v-btn>
+                </v-col>
+                <v-col cols="4">
+                <v-text-field class="mt-2 mr-10" solo label="search"></v-text-field>
+
+                </v-col>
+              </v-row>
+
             </v-col>
           </v-row>
       <v-simple-table>
@@ -85,6 +91,10 @@
   </div>
 </template>
         </v-card>
+      </v-col>
+      
+      <v-col cols="3">
+          <CardStockVaksin2 vaksin="100" img="/img/Pfizer Vaksin.png" />
       </v-col>
     </v-row>
   </v-container>

@@ -2,11 +2,23 @@
   <v-container>
     <section>
       <div class="text-xl" style="margin-bottom: 10px">
-        Jenis Vaksin
-      </div>
-      <div class="text-xl" style="margin-bottom: 10px">
-        Stock Vaksin
-           
+        Tambahkan Stock Vaksin
+        <v-col cols="3">
+          <CardStockVaksin2 vaksin="240" img="/img/Sinovac Vaksin.png" />
+      </v-col>
+      
+      <v-col cols="3">
+          <CardStockVaksin2 vaksin="200" img="/img/Astrazeneca Vaksin.png" />
+      </v-col>
+      
+      <v-col cols="3">
+          <CardStockVaksin2 vaksin="160" img="/img/Moderna Vaksin.png" />
+      </v-col>
+
+      <v-col cols="3">
+          <CardStockVaksin2 vaksin="100" img="/img/Pfizer Vaksin.png" />
+      </v-col>   
+    
  </div>
     </section>
   </v-container>
