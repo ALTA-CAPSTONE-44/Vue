@@ -1,74 +1,157 @@
 <template>
   <v-container>
-    <CardStockVaksin />
-    
+    <v-row>
+      <v-col cols="3">
+          <CardStockVaksin />
+      </v-col>
+      
+      <v-col cols="3">
+          <CardStockVaksin2 vaksin="240" img="/img/Sinovac Vaksin.png" />
+      </v-col>
+      
+      <v-col cols="3">
+          <CardStockVaksin2 vaksin="200" img="/img/Astrazeneca Vaksin.png" />
+      </v-col>
+      
+      <v-col cols="3">
+          <CardStockVaksin2 vaksin="160" img="/img/Moderna Vaksin.png" />
+      </v-col>
 
-    <div style="margin-top: 40px" class="grid-vact">
-      <CardStockVaksin2 />
-      <CardStockVaksin2 />
-      <CardStockVaksin2 />
-      <CardStockVaksin2 />
-    </div>
+      <v-col cols="3">
+          <CardStockVaksin2 vaksin="100" img="/img/Pfizer Vaksin.png" />
+      </v-col>
+      <v-col cols="9">
+        <v-card>
+          <v-row justify="center">
+            <v-col lg="12" md="12" class="d-flex justify-end">
+              <v-btn class="ml-4 mb-4 mt-4 mr-6" color="blue" dark>
+                <v-icon>mdi-plus</v-icon> Tambah Stock Baru
+              </v-btn>
+            </v-col>
+          </v-row>
+      <v-simple-table>
+    <template v-slot:default>
+      <thead>
+        <tr>
+          <th class="text-center">
+            No <v-icon>mdi-arrow-down</v-icon>
+          </th>
+          <th class="text-center">
+            Tanggal <v-icon>mdi-arrow-down</v-icon>
+          </th>
+          <th class="text-center">
+            Nama Vaksin <v-icon>mdi-arrow-down</v-icon>
+          </th>
+          <th class="text-center">
+            Status <v-icon>mdi-arrow-down</v-icon>
+          </th>
+          <th class="text-center">
+            Tanggal <v-icon>mdi-arrow-down</v-icon>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="(item,index) in vaksin"
+          :key="item.name"
 
-    <div>
-      <div class="text-xl my-6">Laporan pengambilan vaksin</div>
-      <table>
-        <tr>
-          <th style="border-radius: 8px">No.</th>
-          <th>Tanggal</th>
-          <th>Nama Vaksin</th>
-          <th style="border-radius: 8px">Jumlah</th>
+        >
+          <td>{{ index +1 }}</td>
+          <td>{{ item.date }}</td>
+          <td>{{ item.vaksin }}</td>
+          <td>{{ item.jumlah }}</td>
+          <td><v-btn :color="item.color" dark>Tambah Stock</v-btn></td>
+
         </tr>
-        <tr>
-          <td class="td" style="border-radius: 8px">01</td>
-          <td>10 Mei 2022</td>
-          <td>Sinovac</td>
-          <td style="border-radius: 8px">50</td>
-        </tr>
-        <tr>
-          <td class="td" style="border-radius: 8px">02</td>
-          <td>10 Mei 2022</td>
-          <td>Sinovac</td>
-          <td style="border-radius: 8px">50</td>
-        </tr>
-        <tr>
-          <td class="td" style="border-radius: 8px">03</td>
-          <td>10 Mei 2022</td>
-          <td>Sinovac</td>
-          <td style="border-radius: 8px">50</td>
-        </tr>
-         <tr>
-          <td class="td" style="border-radius: 8px">04</td>
-          <td>10 Mei 2022</td>
-          <td>Sinovac</td>
-          <td style="border-radius: 8px">50</td>
-        </tr>
-         <tr>
-          <td class="td" style="border-radius: 8px">05</td>
-          <td>10 Mei 2022</td>
-          <td>Sinovac</td>
-          <td style="border-radius: 8px">50</td>
-        </tr>
-         <tr>
-          <td class="td" style="border-radius: 8px">06</td>
-          <td>10 Mei 2022</td>
-          <td>Sinovac</td>
-          <td style="border-radius: 8px">50</td>
-        </tr>
-         <tr>
-          <td class="td" style="border-radius: 8px">07</td>
-          <td>10 Mei 2022</td>
-          <td>Sinovac</td>
-          <td style="border-radius: 8px">50</td>
-        </tr>
-      </table>
-    </div>
+      </tbody>
+    </template>
+  </v-simple-table>
+  <v-divider></v-divider>
+<template>
+  <div class="text-center">
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="8">
+          <v-container class="max-width">
+            <v-pagination
+              v-model="page"
+              class="my-4"
+              :length="10"
+            ></v-pagination>
+          </v-container>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+</template>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
+import CardStockVaksin from '~/components/CardStockVaksin.vue';
 export default {
-  layout: "adminLayout",
+    layout: "adminLayout",
+    components: { CardStockVaksin },
+    data: () => ({
+             vaksin: [
+          {
+            date: '10 Mei 2022',
+            vaksin: 'Sinovac',
+            jumlah: 50,
+            color:'blue',
+
+          },
+          {
+            date: '10 Mei 2022',
+            vaksin: 'Sinovac',
+            jumlah: 50,
+            color:'blue',
+
+          },
+                    {
+            date: '10 Mei 2022',
+            vaksin: 'Sinovac',
+            jumlah: 50,
+            color:'blue',
+
+          },
+                    {
+            date: '10 Mei 2022',
+            vaksin: 'Sinovac',
+            jumlah: 50,
+            color:'blue',
+
+          },
+                    {
+            date: '10 Mei 2022',
+            vaksin: 'Sinovac',
+            jumlah: 50,
+            color:'blue',
+
+          },
+                    {
+            date: '10 Mei 2022',
+            vaksin: 'Sinovac',
+            jumlah: 50,
+            color:'blue',
+
+          },
+                    {
+            date: '10 Mei 2022',
+            vaksin: 'Sinovac',
+            jumlah: 50,
+            color:'blue',          
+
+          },
+
+
+        ],
+          page: 1,
+
+    })
 };
 </script>
 

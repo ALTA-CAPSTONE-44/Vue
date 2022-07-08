@@ -38,7 +38,7 @@
           <v-card height="250">
             <div  class="card-vact">
               <div class="side">
-                <v-img src="/img/product.png"> </v-img>
+                <v-img src="/img/Vaccine-B.png" > </v-img>
               </div>
               <div>
                 <div class="text-md">

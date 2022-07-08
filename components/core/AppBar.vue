@@ -4,103 +4,12 @@
             <v-btn v-if="responsive" dark icon @click.stop="onClick">
                 <v-icon>mdi-view-list</v-icon>
             </v-btn>
-            <v-icon >mdi-view-dashboard</v-icon> Dashboard
+            <v-icon >mdi-view-dashboard</v-icon> {{title}}
         </v-toolbar-title>
         <v-spacer />
         <v-toolbar-items>
             <v-row align="center" class="mx-0">
-                <v-card-subtitle>Mulai tanggal</v-card-subtitle>
-                <v-col
-                cols="12"
-                sm="6"
-                md="4"
-                >
-                    <v-menu
-                        ref="menu"
-                        v-model="menu"
-                        :close-on-content-click="false"
-                        :return-value.sync="date"
-                        transition="scale-transition"
-                        offset-y
-                        min-width="auto"
-                    >
-                        <template v-slot:activator="{ on, attrs }">
-                            <v-text-field
-                                v-model="date"
-                                readonly
-                                v-bind="attrs"
-                                v-on="on"
-                            ></v-text-field>
-                        </template>
-                        <v-date-picker
-                        v-model="date"
-                        no-title
-                        scrollable
-                        >
-                        <v-spacer></v-spacer>
-                        <v-btn
-                            text
-                            color="primary"
-                            @click="menu = false"
-                        >
-                            Cancel
-                        </v-btn>
-                        <v-btn
-                            text
-                            color="primary"
-                            @click="$refs.menu.save(date)"
-                        >
-                            OK
-                        </v-btn>
-                    </v-date-picker>
-                </v-menu>
-            </v-col>
-            <v-icon>mdi-minus</v-icon>
-                <v-col
-                cols="12"
-                sm="6"
-                md="4"
-                >
-                    <v-menu
-                        ref="menu"
-                        v-model="menu"
-                        :close-on-content-click="false"
-                        :return-value.sync="date"
-                        transition="scale-transition"
-                        offset-y
-                        min-width="auto"
-                    >
-                        <template v-slot:activator="{ on, attrs }">
-                            <v-text-field
-                                v-model="date"
-                                readonly
-                                v-bind="attrs"
-                                v-on="on"
-                            ></v-text-field>
-                        </template>
-                        <v-date-picker
-                        v-model="date"
-                        no-title
-                        scrollable
-                        >
-                        <v-spacer></v-spacer>
-                        <v-btn
-                            text
-                            color="primary"
-                            @click="menu = false"
-                        >
-                            Cancel
-                        </v-btn>
-                        <v-btn
-                            text
-                            color="primary"
-                            @click="$refs.menu.save(date)"
-                        >
-                            OK
-                        </v-btn>
-                    </v-date-picker>
-                </v-menu>
-            </v-col>
+
                 <v-menu bottom left offset-y transition="slide-y-transition">
                     <template v-slot:activator="{attrs, on}">
                         <v-btn class="toolbar-items" icon v-bind="attrs" v-on="on">

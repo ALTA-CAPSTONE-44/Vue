@@ -2,13 +2,12 @@
   <v-container>
     <section>
       <div class="text-xl" style="margin-bottom: 10px">
-        Sesi yang sedang berjalan
+        Jenis Vaksin
       </div>
-      <div class="gap">
-        <CardVaksin />
-        <CardVaksin />
-
-      </div>
+      <div class="text-xl" style="margin-bottom: 10px">
+        Stock Vaksin
+           
+ </div>
     </section>
   </v-container>
 </template>
