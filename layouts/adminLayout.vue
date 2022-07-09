@@ -27,8 +27,4 @@ props:{
 
 <style>
 
-.app-bar {
-  font-family: 'Inter', sans-serif;
-}
-
 </style>

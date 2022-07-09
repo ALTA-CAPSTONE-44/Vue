@@ -12,10 +12,8 @@
     <v-list-item class="py-8">
       <v-img src="/img/logo.png" style="width: 100px" />
     </v-list-item>
-    <v-divider class="mx-3 mb-3" />
 
     <v-list nav>
-      <div />
       <v-list-item
         v-for="(link, i) in links"
         :key="i"
@@ -32,18 +30,17 @@
     </v-list>
 
     <template v-slot:append>
-      <v-list nav>
-        <v-list-item to="#">
-          <v-list-item-action>
-            <v-icon>mdi-package-up</v-icon>
-          </v-list-item-action>
+      <div class="pa-8">
+        <img src="/img/profile.png" >
+        <div>Ahmad Alfian</div>
+        <div class="text-sm">Admin RS Sultan Haldirin</div>
+        <v-btn class="mt-8 align-items-center" rounded outlined color="#0FE0CB">
+          <v-icon>mdi-logout</v-icon>
+          <div>Keluar</div>
+        </v-btn>
+      </div>
+     </template>
 
-          <v-list-item-title class="font-weight-light"
-            >Something else</v-list-item-title
-          >
-        </v-list-item>
-      </v-list>
-    </template>
   </v-navigation-drawer>
 </template>
 
