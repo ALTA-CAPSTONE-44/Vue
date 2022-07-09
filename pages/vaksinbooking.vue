@@ -13,28 +13,26 @@
                         <h1 class="text-center display-2 --text text--accent-3" style="text-align:center; margin-top: 50px;">Booking Vaksin</h1>
                         <v-form>
                          <h2 style="text-align:center; margin-top: 20px;">Untuk siapa pendaftaran vaksin</h2>
-                          <v-checkbox
-                            v-model="ex4"
-                            label="Diri sendiri"
-                            color="primary"
-                            value="Diri sendiri"
-                            hide-details
-                            outlined
-                            style="margin-left:110px;"
-                        ></v-checkbox>
-                          
-                          <v-checkbox
-                            v-model="ex4"
-                            label="Keluarga"
-                            color="primary"
-                            value="Keluarga"
-                            hide-details
-                            style="margin-left:110px;"  
-                        ></v-checkbox>
+                          <v-radio-group
+                          v-model="ex4"
+                          column
+                          style="margin-left:110px;"
+                          >
+                            <v-radio
+                              label="Diri sendiri"
+                              color="#61E8DA"
+                              value="Diri sendiri"
+                            ></v-radio>
+                            <v-radio
+                              label="Keluarga"
+                              color="#61E8DA"
+                              value="Keluarga" 
+                            ></v-radio>
+                          </v-radio-group>
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5" style="text-align:center;">
-                        <v-btn color="teal accent-3" dark href="/vaksinbooking1">Next</v-btn>
+                        <v-btn color="#61E8DA" dark href="/vaksinbooking1">Next</v-btn>
                       </div>
                     </v-col>
                   </v-row>

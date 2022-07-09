@@ -1,5 +1,5 @@
 <template>
-<v-app>
+<v-app class="app-bar">
         <core-drawer />
     <core-app-bar />
         <core-view />
@@ -26,5 +26,9 @@ props:{
 </script>
 
 <style>
+
+.app-bar {
+  font-family: 'Inter', sans-serif;
+}
 
 </style>

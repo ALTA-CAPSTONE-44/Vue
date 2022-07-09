@@ -8,47 +8,51 @@
             <v-card-title>Total Penerima Vaksin</v-card-title>
           </v-card>
         </v-col>
+        <v-col cols="12">
+           <v-card>
+            <v-card-title>Sesi yang sedang berjalan</v-card-title>
+          </v-card>
+        </v-col>
         <v-col cols="6">
-          <v-card height="250">
+          <v-card>
             <div  class="card-vact">
-              <div class="side">
-                <v-img src="/img/product.png"> </v-img>
+              <div class="slice">
+                <div>
+                  <img src="/img/product.png" alt="product"/>
+                </div>
+                <div>
+                  <div>
+                    <div class="text-xl">Sesi 1</div>
+                    <div class="text-sm">Senin, 30 Mei 2020</div>
+                    <div class="text-sm">08.00 - 12.00</div>
+                  </div>
+                  <div style="margin-top: 50px">
+                    <div class="text-sm">Vaksin Sinovac</div>
+                    <div class="text-sm"><v-icon color="#45C6FC">mdi-needle</v-icon>50/60</div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <div class="text-md">
-                  Sesi 1
-                </div>
-                <div class="text-sm">
-                  Senin, 30 Mei 2022
-                </div>
-                <div class="text-sm">
-                  08.00-12.00
-                </div>
-               
-              <div class="text-sm">
-                Vaksin Sinovac
-                50/60
-              </div>
-            </div>
             </div>
           </v-card>
         </v-col>
         
         <v-col cols="6">
-          <v-card height="250">
+          <v-card>
             <div  class="card-vact">
-              <div class="side">
-                <v-img src="/img/product.png" > </v-img>
-              </div>
-              <div>
-                <div class="text-md">
-                  Sesi 2
+              <div class="slice">
+                <div>
+                  <img src="/img/vaccine-2.png" width="160px" alt="vaccine-2"/>
                 </div>
-                <div class="text-sm">
-                  Senin, 30 Mei 2022
-                </div>
-                <div class="text-sm">
-                  12.00-16.00
+                <div>
+                  <div>
+                    <div class="text-xl">Sesi 1</div>
+                    <div class="text-sm">Senin, 30 Mei 2020</div>
+                    <div class="text-sm">08.00 - 12.00</div>
+                  </div>
+                  <div style="margin-top: 50px">
+                    <div class="text-sm">Vaksin Sinovac</div>
+                    <div class="text-sm"><v-icon color="#45C6FC">mdi-needle</v-icon>50/60</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -59,10 +63,10 @@
     <v-col cols="4">
       <v-row>
         <v-col cols="12">
-          <v-card height="250">
+          <v-card rounded-lg height="250">
             <v-card-title>Total Pengguna</v-card-title>
             <div class="slice">
-              <img src="/img/iconvact.png" alt="iconvact" style="width: 82px" />
+              <img src="/img/user.png" alt="iconvact" style="width: 82px" />
               <div class="text-2xl">700</div>
             </div>
           </v-card>  
@@ -72,7 +76,7 @@
           <v-card height="250">
             <v-card-title>Total Pendaftar</v-card-title>
             <div class="slice">
-              <img src="/img/iconvact.png" alt="iconvact" style="width: 82px" />
+              <img src="/img/subtract.png" alt="subtract" style="width: 82px" />
               <div class="text-2xl">700</div>
             </div>
           </v-card>  
@@ -114,16 +118,15 @@ font-weight: bold;
 .text-sm {
   font-size: 11px;
   font-weight: 500;
-  color: #bababa;
 }
 .card-vact {
   display: flex;
-  width: 90%;
   margin: 0 auto;
   gap: 10px;
 }
 
-.sidee {
-  width: 50%;
+.side {
+  margin-top: 10%;
+  width: 40%;
 }
 </style>

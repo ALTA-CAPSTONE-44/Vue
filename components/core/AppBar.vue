@@ -8,7 +8,7 @@
         </v-toolbar-title>
         <v-spacer />
         <v-toolbar-items>
-            <v-row align="center" class="mx-0">
+            <v-row align-items="center" class="mx-0">
 
                 <v-menu bottom left offset-y transition="slide-y-transition">
                     <template v-slot:activator="{attrs, on}">

@@ -14,7 +14,7 @@
 
         <div style="margin-top: 50px">
           <div class="text-sm">Vaksin Sinovac</div>
-          <div class="text-sm">50/60</div>
+          <div class="text-sm"><v-icon color="#45C6FC">mdi-needle</v-icon>50/60</div>
         </div>
       </div>
     </div>
