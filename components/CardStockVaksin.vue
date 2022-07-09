@@ -3,15 +3,26 @@
     <div class="card-total-stock">
       <div class="text-xl">Total Stock Vaksin</div>
       <div class="slice">
-        <img src="/img/iconvact.png" alt="iconvact" style="height: 120px"  />
-        <div class="text-2xl">700</div>
+        <img :src="img" alt="iconvact" style="height: 120px"  />
+        <div class="text-2xl">{{number}}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+      props: {
+      img: {
+        type: String,
+        default: '/img/vact1.png',
+      },
+      vaksin : {
+        type: Number,
+        default: 250
+      }
+  }
+};
 </script>
 
 <style>

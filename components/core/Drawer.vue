@@ -75,6 +75,7 @@ export default {
         text: "Stock",
       },
 
+
       {
         to: "",
         icon: "mdi-cog",

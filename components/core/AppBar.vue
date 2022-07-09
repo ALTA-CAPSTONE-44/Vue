@@ -24,7 +24,7 @@
                     </template>
                     <v-card>
                         <v-list danse>
-                            <v-list-item v-for="notification in notifications" :key="notification" @click="onClick">
+                            <v-list-item v-for="notification in notifications" :key="notification">
                                 <v-list-item-title v-text="notification" />
                             </v-list-item>
                         </v-list>

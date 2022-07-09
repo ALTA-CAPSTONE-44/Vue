@@ -1,6 +1,7 @@
 <template>
   <v-container>
     <v-row>
+
       <v-col cols="3">
           <CardStockVaksin />
       </v-col>
@@ -23,7 +24,7 @@
             <v-col lg="12" md="12" >
               <v-row class="d-flex justify-end">
                 <v-col cols="3"> 
-              <v-btn class="ml-4 mb-4 mt-3 mr-6" color="blue" dark>
+              <v-btn class="ml-4 mb-4 mt-3 mr-6" color="blue" @click="openFormVaksin" dark>
                 <v-icon>mdi-plus</v-icon> Tambah Stock Baru
               </v-btn>
                 </v-col>
@@ -160,8 +161,15 @@ export default {
 
         ],
           page: 1,
+          dialog: false,
 
-    })
+
+    }),
+    methods: {
+      openFormVaksin(){
+        this.$router.push('/admin/addStock')
+      }
+    }
 };
 </script>
 
