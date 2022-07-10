@@ -3,7 +3,7 @@
   <v-row>
     <v-col cols="8">
       <v-row>
-        <v-col cols="12" class="mb-6">
+        <v-col cols="12">
           <v-card height="500">
             <v-card-title>Total Penerima Vaksin</v-card-title>
           </v-card>

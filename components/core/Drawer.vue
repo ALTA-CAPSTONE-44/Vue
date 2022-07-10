@@ -73,7 +73,7 @@ export default {
       },
 
       {
-        to: "",
+        to: "/admin/setting",
         icon: "mdi-cog",
         text: "Settings",
       },
