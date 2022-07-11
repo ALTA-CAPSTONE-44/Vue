@@ -23,7 +23,7 @@
             <v-col lg="12" md="12" >
               <v-row class="d-flex justify-end">
                 <v-col cols="3"> 
-              <v-btn class="ml-4 mb-4 mt-3 mr-6" color="blue" dark>
+              <v-btn href="/admin/stockmake" class="ml-4 mb-4 mt-3 mr-6" color="blue" dark>
                 <v-icon>mdi-plus</v-icon> Tambah Stock Baru
               </v-btn>
                 </v-col>
@@ -52,7 +52,7 @@
             Status <v-icon>mdi-arrow-down</v-icon>
           </th>
           <th class="text-center">
-            Tanggal <v-icon>mdi-arrow-down</v-icon>
+            History <v-icon>mdi-arrow-down</v-icon>
           </th>
         </tr>
       </thead>

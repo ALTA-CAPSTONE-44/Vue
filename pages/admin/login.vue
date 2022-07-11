@@ -7,7 +7,9 @@
             <v-card class="elevation-10">
                   <v-row class="fill-height">
                     <v-col cols="12" md="6"  class="accent-3">
-                      <v-img src="#" height="500"></v-img>
+                      <v-img 
+                      :src="require('~/assets/login-admin.png')"
+                      height="500"></v-img>
                     </v-col>
                     <v-col cols="12" md="6">
                       <v-card-text class="mt-12">
@@ -21,6 +23,7 @@
                             color="teal accent-3"
                             outlined
                           />
+                          <nuxt-link to="#" style="float:right;"> lupa sandi ?</nuxt-link>
                           <p>Password</p>
                           <v-text-field
                             id="password"
@@ -30,16 +33,9 @@
                             color="teal accent-3"
                             outlined
                           />
-                          <div style="margin-bottom:20px;">
-                          <nuxt-link to="#" style="float:right;"> lupa sandi ?</nuxt-link>
-                          </div>
-                          <div style="margin-bottom:20px; text-align:center; margin-left: 70px;" >
-                          </div>
+                          <v-btn href="/admin/" color="#0FE0CB" dark>Masuk</v-btn>
                         </v-form>
                       </v-card-text>
-                      <div class="text-center mt-n5">
-                        <v-btn color="teal accent-3" dark>Login</v-btn>
-                      </div>
                     </v-col>
                   </v-row>
             </v-card>
