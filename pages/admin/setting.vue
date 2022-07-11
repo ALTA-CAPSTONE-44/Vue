@@ -6,7 +6,8 @@
             <h3 class="mr-6">Manage Account User</h3>
         </v-row>
         <!-- <core-setting-account /> -->
-        <core-manage-admin />
+        <!-- <core-manage-admin /> -->
+        <core-manage-user />
     </v-container>
 </template>
 
@@ -25,6 +26,7 @@ import AppBar from '~/components/core/AppBar.vue'
 import Vaksinbooking from '../vaksinbooking.vue'
 import SettingAccount from '@/components/core/SettingAccount.vue'
 import ManageAdmin from '~/components/core/ManageAdmin.vue'
+import ManageUser from '~/components/core/ManageUser.vue'
 export default {
   name: 'SettingPage',
   layout: 'adminLayout',
@@ -36,6 +38,7 @@ export default {
     Vaksinbooking,
     CoreSettingAccount: SettingAccount,
     CoreManageAdmin: ManageAdmin,
+    CoreManageUser: ManageUser,
   },
 }
 </script>
