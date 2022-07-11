@@ -189,7 +189,4 @@ td {
   text-align: center;
   padding: 10px;
 }
-h2 {
-  color: #4287f5;
-}
 </style>
