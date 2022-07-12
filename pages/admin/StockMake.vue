@@ -68,10 +68,10 @@
             <v-text-field label="Senin, 1 Januari 2022" class="py-lg-3"></v-text-field>
           </v-col>
 
-          <!-- <div>Pelaksanaan Vaksin</div>
+          <div>Pelaksanaan Vaksin</div>
           <v-col cols="12" sm="6" md="4">
             <v-text-field label="Senin, 1 Januari 2022" class="py-lg-3"></v-text-field>
-          </v-col> -->
+          </v-col>
         </v-row>
       </div>
     </section>

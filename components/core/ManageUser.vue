@@ -55,7 +55,18 @@
                     <p>3375920894810001</p>
                 </v-col>
                 <v-col cols="12" md="2" class="mt-5">
-                    <p>Kontak Tertaut</p>
+                    <v-avatar
+                    color="indigo"
+                    size="36"
+                    >
+                    <span class="white--text text-h5">A</span>
+                    </v-avatar>
+                    <v-avatar
+                    color="red"
+                    size="36"
+                    >
+                    <span class="white--text text-h5">J</span>
+                    </v-avatar>
                 </v-col>
                 <v-col cols="12" md="1" class="mt-5">
                     <v-icon large>mdi-delete-outline</v-icon>

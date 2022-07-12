@@ -8,6 +8,7 @@
         <core-setting-account v-if="settingAccount" />
         <core-manage-admin v-if="manageAdmin" />
         <core-manage-user v-if="manageUser" />
+        <!-- <core-add-admin /> -->
     </v-container>
 </template>
 
@@ -32,6 +33,7 @@ import Vaksinbooking from '../vaksinbooking.vue'
 import SettingAccount from '@/components/core/SettingAccount.vue'
 import ManageAdmin from '~/components/core/ManageAdmin.vue'
 import ManageUser from '~/components/core/ManageUser.vue'
+import AddAdmin from '~/components/core/AddAdmin.vue'
 export default {
   name: 'SettingPage',
   layout: 'adminLayout',
@@ -44,6 +46,7 @@ export default {
     CoreSettingAccount: SettingAccount,
     CoreManageAdmin: ManageAdmin,
     CoreManageUser: ManageUser,
+    CoreAddAdmin: AddAdmin,
   },
   data() {
     return {
