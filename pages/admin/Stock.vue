@@ -31,7 +31,7 @@
             <v-col lg="12" md="12" >
               <v-row class="d-flex justify-end">
                 <v-col> 
-                  <v-btn href="/admin/stockmake" class="ml-4 mb-4 mt-3 mr-6" color="blue" dark>
+                  <v-btn href="/admin/addstock" class="ml-4 mb-4 mt-3 mr-6" color="blue" dark>
                     <v-icon>mdi-plus</v-icon> Tambah Stock Baru
                   </v-btn>
                 </v-col>
