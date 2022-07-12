@@ -1,6 +1,42 @@
 <template>
 <v-container>
   <v-row>
+    <v-col cols="12" class="mb-10 pl-5 pr-5">
+    <v-app-bar
+      absolute
+      color="transparent"
+      elevate-on-scroll
+      scroll-target="#scrolling-techniques-7"
+      class="ml-3 mr-3"
+    >
+
+      <v-btn text :style="`font-size:20px; color: ${this.registerd};`"  >
+        Registerd
+      </v-btn>
+      <v-btn text :style="`font-size:20px; color: ${this.waiting};`"  >
+        Waiting
+      </v-btn>
+      <v-btn text :style="`font-size:20px; ${this.complate}`" >
+        Complated
+      </v-btn>
+
+      <v-spacer></v-spacer>
+      <v-text-field
+                    prepend-inner-icon="mdi-magnify"
+                    rounded
+                    background-color="white"
+                    placeholder="Search"
+                    color="#45C6FC"
+                    dense
+                    width="250px"
+                    large
+                    class="shrink mx-6"
+                    ></v-text-field>
+
+
+
+    </v-app-bar>
+    </v-col>
     <v-col cols="12">
         <v-card>
                   <v-simple-table>
@@ -74,6 +110,9 @@
 export default {
   layout: "adminLayout",
       data: () => ({
+        registerd: '#A6A6A6',
+        waiting: '#A6A6A6' ,
+        complated: 'black',
              vaksin: [
           {
             date: 'P-GZ7TBCM1',
@@ -136,7 +175,14 @@ export default {
         ],
           page: 1,
 
-    })
+    }),
+    methods: {
+      changeColorRegister(){
+        this.registerd = 'black';
+        this.waiting = '#A6A6A6';
+        this.complated = '#A6A6A6';
+      }
+    }
 }
 </script>
 

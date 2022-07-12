@@ -22,10 +22,14 @@
                             </v-badge>
                         </v-btn>
                     </template>
-                    <v-card>
+                    <v-card  shaped elevation="0">
                         <v-list danse>
+                            <v-list-item>
+                                <v-list-item-title>Notification</v-list-item-title>
+                            </v-list-item>
+                            <v-divider></v-divider>
                             <v-list-item v-for="notification in notifications" :key="notification" @click="onClick">
-                                <v-list-item-title v-text="notification" />
+                                <v-list-item-title  ><v-icon class="mr-3" color="blue">{{notification.icon}}</v-icon> {{notification.title}}</v-list-item-title>
                             </v-list-item>
                         </v-list>
                     </v-card>
@@ -39,11 +43,16 @@
 export default {
     data: () => ({
          notifications: [
-            'Mike, John responded to your email',
-            'You have 5 new tasks',
-            "You're now a friend with Andrew",
-            'Another Notification',
-            'Another One',
+            {title:'Mike, John responded to your email',icon: 'mdi-file'},
+            {title:'You have 5 new tasks',icon: 'mdi-file'},
+            {title:"You're now a friend with Andrew",icon: 'mdi-file'},
+            {title:'Another Notification',icon: 'mdi-file'},
+            {title:'Another One',icon: 'mdi-file'},
+            
+            
+            
+            
+            
         ],
         responsive: false,
         title: null,
