@@ -13,27 +13,44 @@
                     </v-col>
                     <v-col cols="12" md="6">
                       <v-card-text class="mt-12">
-                        <h1 class="text-center display-2 --text text--accent-3">Silakan Masuk ke Akun Anda</h1>
+                        <div class="pa-4">
+                          <h1 class="text-center">Silakan Masuk ke Akun Anda</h1>
+                        </div>
                         <v-form>
                             <p>Nomor ID</p>
                           <v-text-field
-                            label="Name"
                             name="Name"
                             type="text"
-                            color="teal accent-3"
+                            placeholder="Masukkan ID Anda"
                             outlined
                           />
-                          <nuxt-link to="#" style="float:right;"> lupa sandi ?</nuxt-link>
+                          <a class="grey--text" @click="snackbar = true" style="float:right;">Lupa Password?</a>
+                          <v-snackbar
+                            v-model="snackbar"
+                            color="#45C6FC"
+                          >
+                            {{ text }}
+
+                            <template v-slot:action="{ attrs }">
+                              <v-btn
+                                color="white"
+                                text
+                                v-bind="attrs"
+                                @click="snackbar = false"
+                              >
+                                OKE
+                              </v-btn>
+                            </template>
+                          </v-snackbar>
                           <p>Password</p>
                           <v-text-field
                             id="password"
-                            label="Password"
                             name="password"
                             type="password"
-                            color="teal accent-3"
+                            placeholder="Masukkan Password"
                             outlined
                           />
-                          <v-btn href="/admin/" color="#0FE0CB" dark>Masuk</v-btn>
+                          <v-btn href="/admin/" color="#0FE0CB">Masuk</v-btn>
                         </v-form>
                       </v-card-text>
                     </v-col>
@@ -48,10 +65,17 @@
 
 <script>
 export default {
-
+  data: () => ({
+      snackbar: false,
+      text: `Silahkan menghubungi administrator utama`,
+    }),
 }
 </script>
 
-<style>
-
+<style scoped>
+  h1 {
+    font-size: 3rem;
+    line-height: normal;
+    color: #0FE0CB;
+  }
 </style>
