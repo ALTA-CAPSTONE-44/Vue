@@ -26,11 +26,17 @@ export default {
   components: { NavBar, Vaksinbooking },
   name: 'IndexPage',
   layout: "adminLayout",
+  data () {
+    return{
+    session: [],
+    }
+  },
   methods: {
     pushToSession() {
      this.$router.push('/admin/action/sectionData')
-    }
-  }
+    },
+  },
+  
 };
 </script>
 

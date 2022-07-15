@@ -112,6 +112,7 @@ export default {
       data: () => ({
         registerd: '#A6A6A6',
         waiting: '#A6A6A6' ,
+        session: [],
         complated: 'black',
              vaksin: [
           {
@@ -181,8 +182,13 @@ export default {
         this.registerd = 'black';
         this.waiting = '#A6A6A6';
         this.complated = '#A6A6A6';
-      }
-    }
+      },
+    async getAllsession() {
+    const session = await this.$store.dispatch("auth/getAllsession");
+    console.log("session dari method: ", session)
+    this.session = session
+  }  
+ },
 }
 </script>
 

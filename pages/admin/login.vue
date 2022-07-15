@@ -80,16 +80,15 @@ export default {
         email: this.email,
         password: this.password,
       };
-      console.log(this.$store);
 
       const response = this.$store.dispatch("auth/login", param);
 
-      if (response === "berhasil") {
-        this.$router.push("login");
+      if (response) {
+        this.$router.push("/admin/");
+      } 
       }
     }
   }
-}
 </script>
 
 <style scoped>
