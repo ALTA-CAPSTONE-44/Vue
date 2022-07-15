@@ -23,6 +23,7 @@
                             type="text"
                             placeholder="Masukkan ID Anda"
                             outlined
+                            v-model="email"
                           />
                           <a class="grey--text" @click="snackbar = true" style="float:right;">Lupa Password?</a>
                           <v-snackbar
@@ -49,8 +50,9 @@
                             type="password"
                             placeholder="Masukkan Password"
                             outlined
+                            v-model="password"
                           />
-                          <v-btn href="/admin/" color="#0FE0CB">Masuk</v-btn>
+                          <v-btn color="#0FE0CB" @click="login">Masuk</v-btn>
                         </v-form>
                       </v-card-text>
                     </v-col>
@@ -65,10 +67,28 @@
 
 <script>
 export default {
-  data: () => ({
-      snackbar: false,
-      text: `Silahkan menghubungi administrator utama`,
-    }),
+  name: 'LoginPage',
+  data() {
+    return {
+      email: '',
+      password: '',
+    }
+  },
+  methods: {
+    async login() {
+      const param = {
+        email: this.email,
+        password: this.password,
+      };
+      console.log(this.$store);
+
+      const response = this.$store.dispatch("auth/login", param);
+
+      if (response === "berhasil") {
+        this.$router.push("login");
+      }
+    }
+  }
 }
 </script>
 
