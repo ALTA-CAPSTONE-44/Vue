@@ -14,35 +14,18 @@
                     <v-col cols="12" md="6">
                       <v-card-text class="mt-12">
                         <div class="pa-4">
-                          <h1 class="text-center">Silakan Masuk ke Akun Anda</h1>
+                          <h1 class="text-center">Silakan Register Akun Admin Anda</h1>
                         </div>
                         <v-form>
                             <p>Email</p>
                           <v-text-field
                             name="Email"
-                            type="text"
+                            type="email"
                             placeholder="Masukkan Email Anda"
                             outlined
+                            required
                             v-model="email"
                           />
-                          <a class="grey--text" @click="snackbar = true" style="float:right;">Lupa Password?</a>
-                          <v-snackbar
-                            v-model="snackbar"
-                            color="#45C6FC"
-                          >
-                            {{ text }}
-
-                            <template v-slot:action="{ attrs }">
-                              <v-btn
-                                color="white"
-                                text
-                                v-bind="attrs"
-                                @click="snackbar = false"
-                              >
-                                OKE
-                              </v-btn>
-                            </template>
-                          </v-snackbar>
                           <p>Password</p>
                           <v-text-field
                             id="password"
@@ -50,13 +33,12 @@
                             type="password"
                             placeholder="Masukkan Password"
                             outlined
+                            required
                             v-model="password"
+                            :rules="passwordRules"   
                           />
-                           <div style="margin-bottom:20px; text-align:center;" >
-                          <nuxt-link to="/admin/register" class="text-center"> Belum punya akun ? Register</nuxt-link>
-                          </div>
+                          <v-btn color="#0FE0CB" @click="register"  style="margin-left:200px;">register</v-btn>
                         </v-form>
-                        <v-btn color="#0FE0CB" @click="login" style="margin-left:200px;" >Masuk</v-btn>
                       </v-card-text>
                     </v-col>
                   </v-row>
@@ -70,25 +52,30 @@
 
 <script>
 export default {
-  name: 'LoginPage',
+  name: 'LoginRegister',
   data() {
     return {
       email: '',
       password: '',
+      passwordRules: [
+        v => !!v || 'Password required',
+      ]
     }
   },
   methods: {
-    async login() {
+    async register() {
       const param = {
         email: this.email,
         password: this.password,
       };
 
-      const response = this.$store.dispatch("auth/login", param);
+      const response = this.$store.dispatch("auth/register", param);
 
       if (response) {
-        this.$router.push("/admin/");
-      } 
+        this.$router.push("/admin/login");
+      } else {
+        this.$router.push("/admin/register");
+      }
       }
     }
   }

@@ -50,7 +50,24 @@ export const actions = {
     .catch((error) => {
       store.commit("setinfo: ", error)
     })
-  }
+  },
+  register (store, param) {
+    return axios
+    .post('http://54.255.189.230:8888/admins', {
+      email: param.email,
+      password: param.password,
+    })
+    .then((response) => {
+      console.log("response: ", response)
+      console.log("response token: ", response.data.token)
+
+      const param = {
+        token: response.data.token
+      }
+
+      store.commit("setToken", response.data.token)
+    })
+  },
 }
 
 export default {actions, mutations, state};
