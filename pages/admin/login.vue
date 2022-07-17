@@ -75,6 +75,8 @@ export default {
     return {
       email: '',
       password: '',
+      snackbar: false,
+      text: 'Silahkan menghubungi administrator utama',
     }
   },
   methods: {
