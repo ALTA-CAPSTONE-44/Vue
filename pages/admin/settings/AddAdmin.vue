@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="ma-8">
         <v-card class="mt-8 pa-4">
             <v-row>
                 <v-col class="d-flex justify-start">
-                    <v-icon large>mdi-chevron-left</v-icon>
+                    <v-btn @click="$router.go(-1)"><v-icon large>mdi-chevron-left</v-icon></v-btn>
                     <h3 class="mt-1 ml-3">Add Account Admin</h3>
                 </v-col>
             </v-row>
@@ -96,6 +96,13 @@
         </v-card>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'AddAdmin',
+    layout: 'adminLayout',
+}
+</script>
 
 <style scoped>
 .custom-checkbox-input {

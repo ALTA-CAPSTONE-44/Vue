@@ -6,10 +6,10 @@
           <v-col cols="12" sm="9" md="9">
             <v-card class="elevation-10">
                   <v-row class="fill-height">
-                    <v-col cols="12" md="6"  class="accent-3">
+                    <v-col cols="12" md="6">
                       <v-img 
                       :src="require('~/assets/login-admin.png')"
-                      height="500"></v-img>
+                      height="100%"></v-img>
                     </v-col>
                     <v-col cols="12" md="6">
                       <v-card-text class="mt-12">
@@ -24,6 +24,7 @@
                             placeholder="Masukkan Email Anda"
                             outlined
                             v-model="email"
+                            :rules="emailRules"
                           />
                           <a class="grey--text" @click="snackbar = true" style="float:right;">Lupa Password?</a>
                           <v-snackbar
@@ -51,6 +52,7 @@
                             placeholder="Masukkan Password"
                             outlined
                             v-model="password"
+                            :rules="passwordRules"
                           />
                            <div style="margin-bottom:20px; text-align:center;" >
                           <nuxt-link to="/admin/register" class="text-center"> Belum punya akun ? Register</nuxt-link>
@@ -77,6 +79,12 @@ export default {
       password: '',
       snackbar: false,
       text: 'Silahkan menghubungi administrator utama',
+      passwordRules: [
+        v => !!v || 'Password required',
+      ],
+      emailRules: [
+        v => !!v || 'Email required',
+      ],
     }
   },
   methods: {

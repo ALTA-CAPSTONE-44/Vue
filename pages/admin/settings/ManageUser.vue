@@ -1,5 +1,12 @@
 <template>
-    <div>
+    <div class="ma-8">
+        <v-container>
+            <v-row class="d-flex flex-row setting-menu">
+                <nuxt-link to="/admin/settings/SettingAccount" class="mr-6">Account</nuxt-link>
+                <nuxt-link to="/admin/settings/ManageAdmin" class="mr-6">Manage Account Admin</nuxt-link>
+                <nuxt-link to="/admin/settings/ManageUser" class="mr-6">Manage Account User</nuxt-link>
+            </v-row>
+        </v-container>
         <v-card class="mt-8 pa-4">
             <v-row>
                 <v-col class="d-flex justify-start">
@@ -85,6 +92,8 @@
 
 <script>
 export default {
+    name: 'ManageUser',
+    layout: 'adminLayout',
     data () {
       return {
         page: 1,
