@@ -10,7 +10,7 @@
       </v-col>
     </v-row>
     <v-row class="ml-4 mt-10 d-flex justify-start">
-      <h1>History Vaksin</h1>
+      <h1>History Vaksin  </h1>
       <v-spacer></v-spacer>
       <v-text-field
                     prepend-inner-icon="mdi-magnify"
@@ -51,9 +51,7 @@
                   <th class="text-center">
                     Nama Vaksin <v-icon>mdi-arrow-down</v-icon>
                   </th>
-                  <th class="text-center">
-                    Status <v-icon>mdi-arrow-down</v-icon>
-                  </th>
+
                   <th class="text-center">
                     History <v-icon>mdi-arrow-down</v-icon>
                   </th>
@@ -61,14 +59,13 @@
               </thead>
               <tbody>
                 <tr
-                  v-for="(item,index) in vaksin"
+                  v-for="(item,index) in stateVaccines"
                   :key="item.name"
 
                 >
-                  <td>{{ index +1 }}</td>
-                  <td>{{ item.date }}</td>
-                  <td>{{ item.vaksin }}</td>
-                  <td>{{ item.jumlah }}</td>
+                  <td>{{ index + 1 }}</td>
+                  <td>{{ item.CreatedAt }}</td>
+                  <td>{{ item.name }}</td>
                   <td><v-btn :color="item.color" dark>Tambah Stock</v-btn></td>
 
                 </tr>
@@ -100,10 +97,31 @@
 </template>
 
 <script>
+import {mapActions,mapState} from 'vuex'
+
 import CardStockVaksin from '~/components/CardStockVaksin.vue';
 export default {
     layout: "adminLayout",
     components: { CardStockVaksin },
+    computed: {
+      stateVaccines(){
+        return this.$store.state.vaccines.vaccines
+      }
+    },
+    mounted(){
+        this.token = localStorage.getItem('token')?localStorage.getItem('token'):null
+      if(!this.token){
+             this.$router.push("/admin/login");
+
+
+      }
+      this.getStock();
+    },
+    methods: {
+      ...mapActions({
+        getStock: 'vaccines/handleGetStock'
+      })
+    },
     data: () => ({
              vaksin: [
           {

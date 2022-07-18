@@ -2,19 +2,19 @@
   <div class="card-vact">
     <div class="slice">
       <div>
-        <img src="/img/product.png" alt="product" class="img-vact" />
+        <img :src="img" alt="product" class="img-vact" />
       </div>
 
       <div>
         <div>
-          <div class="text-xl">Sesi 1</div>
-          <div class="text-sm">Senin, 30 Mei 2020</div>
-          <div class="text-sm">08.00 - 12.00</div>
+          <div class="text-xl">{{title}}</div>
+          <div class="text-sm">{{date}}</div>
+          <div class="text-sm">{{time}}</div>
         </div>
 
         <div style="margin-top: 50px">
-          <div class="text-sm">Vaksin Sinovac</div>
-          <div class="text-sm"><v-icon color="#45C6FC">mdi-needle</v-icon>50/60</div>
+          <div class="text-sm">{{vaksin}}</div>
+          <div class="text-sm"><v-icon color="#45C6FC">mdi-needle</v-icon>{{number}}</div>
         </div>
       </div>
     </div>
@@ -22,7 +22,35 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props:{
+    img: {
+        type: String,
+
+        default: '/img/product.png',
+    },
+    date: {
+        type: String,
+        default: 'Senin 30 Mei 2020',
+    },
+    time: {
+        type: String,
+        default: '08:00-12.00',
+    },
+    vaksin: {
+       type: String,
+        default: 'Sinovac',
+    },
+    title: {
+       type: String,
+        default: 'Sesi 1',
+    },
+    number: {
+        type: Number,
+        default: 200,
+    }
+  }
+};
 </script>
 
 <style>

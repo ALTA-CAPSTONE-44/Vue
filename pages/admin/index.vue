@@ -102,29 +102,9 @@
 import AppBar from '~/components/core/AppBar.vue'
 import Vaksinbooking from '../vaksinbooking.vue'
 export default {
-  data () {
-    return {
-      session: [],
-    }
-  },
   components: { AppBar, Vaksinbooking },
   name: 'IndexPage',
   layout: 'adminLayout',
-    mounted(){
-        this.token = localStorage.getItem('token')?localStorage.getItem('token'):null
-      if(!this.token){
-             this.$router.push("/admin/login");
-
-
-    }
-  },
-  methods:{
-    async getAllsession() {
-    const session = await this.$store.dispatch("auth/getAllsession");
-    console.log("session dari method: ", session)
-    this.session = session
-  }  
-  }
 }
 </script>
 

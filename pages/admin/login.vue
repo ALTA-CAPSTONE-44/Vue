@@ -87,6 +87,14 @@ export default {
       ],
     }
   },
+  mounted(){
+        this.token = localStorage.getItem('token')?localStorage.getItem('token'):null
+      if(this.token){
+             this.$router.push("/admin/dashboard");
+
+
+    }
+  },
   methods: {
     async login() {
       const param = {

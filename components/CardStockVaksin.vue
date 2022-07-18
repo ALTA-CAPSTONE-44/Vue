@@ -11,7 +11,37 @@
 </template>
 
 <script>
-export default {};
+
+
+export default {
+  props:{
+    img: {
+        type: String,
+
+        default: '/img/product.png',
+    },
+    date: {
+        type: String,
+        default: 'Senin 30 Mei 2020',
+    },
+    time: {
+        type: String,
+        default: '08:00-12.00',
+    },
+    vaksin: {
+       type: String,
+        default: 'Sinovac',
+    },
+    title: {
+       type: String,
+        default: 'Sesi 1',
+    },
+    number: {
+        type: Number,
+        default: 'Sesi 1',
+    }
+  }
+};
 </script>
 
 <style>

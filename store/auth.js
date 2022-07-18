@@ -10,7 +10,7 @@ const mutations= {
     state.session = param;
   },
   setToken(state, param) {
-    state.token = param.token
+    localStorage.setItem('token', param)
   }
 };
 
