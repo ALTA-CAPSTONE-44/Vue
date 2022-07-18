@@ -89,7 +89,7 @@ export default {
       const response = this.$store.dispatch("auth/login", param);
 
       if (response) {
-        this.$router.push("/admin/");
+        this.$router.push("/admin/dashboard");
       } 
       }
     }
