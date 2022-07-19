@@ -1,9 +1,19 @@
 <template>
   <v-container>
     <section>
-      <div class="text-xl" style="margin-bottom: 10px">
-        Sesi yang sedang berjalan 
-      </div>
+      <v-row>
+        <v-col class="d-flex justify-start">
+          <div class="text-xl" style="margin-bottom: 10px">
+            Sesi yang sedang berjalan 
+          </div>
+          <v-spacer></v-spacer>
+          <v-btn
+            href="/admin/AddSession"
+            style="color: white"
+            color="#45C6FC"><v-icon>mdi-plus</v-icon>
+            Tambah Sesi Baru</v-btn>
+        </v-col>
+      </v-row>
       <div class="gap d-flex overflow-x-auto" >
         <div @click="pushToSession()" v-for="item in stateSessions" :key="item.id">
         <CardVaksin  img="/img/product.png" :date="item.date" time="08:00-12.00" vaksin="Sinovac" :title="item.name" :number="item.stock_vaccine"  />
