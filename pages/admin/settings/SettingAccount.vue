@@ -54,7 +54,24 @@
                             :type="value ? 'password' : 'text'"
                             />
                         </v-form>
-                        <v-btn color="#0FE0CB" width="300px">Simpan</v-btn>
+                        <v-btn @click="snackbar = true" color="#0FE0CB" width="300px">Simpan</v-btn>
+                        <v-snackbar
+                            v-model="snackbar"
+                            color="#45C6FC"
+                          >
+                            {{ text }}
+
+                            <template v-slot:action="{ attrs }">
+                              <v-btn
+                                color="white"
+                                text
+                                v-bind="attrs"
+                                @click="snackbar = false"
+                              >
+                                OKE
+                              </v-btn>
+                            </template>
+                          </v-snackbar>
                     </v-card-text>
                 </v-col>
             </v-row>
@@ -73,6 +90,8 @@ export default {
             noid: '3320062508090003',
             pass: '12345678',
             value: String,
+            snackbar: false,
+            text: 'Profil berhasil disimpan',
         }
     }
 }

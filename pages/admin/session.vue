@@ -4,7 +4,7 @@
       <div class="text-xl" style="margin-bottom: 10px">
         Sesi yang sedang berjalan 
       </div>
-      <div class="gap" >
+      <div class="gap d-flex overflow-x-auto" >
         <div @click="pushToSession()" v-for="item in stateSessions" :key="item.id">
         <CardVaksin  img="/img/product.png" :date="item.date" time="08:00-12.00" vaksin="Sinovac" :title="item.name" :number="item.stock_vaccine"  />
 

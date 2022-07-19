@@ -34,7 +34,7 @@
         <img src="/img/profile.png" >
         <div>Ahmad Alfian</div>
         <div class="text-sm">Admin RS Sultan Haldirin</div>
-        <v-btn class="mt-8 align-items-center" rounded outlined color="#0FE0CB">
+        <v-btn to="/admin/login" class="mt-8 align-items-center" rounded outlined color="#0FE0CB">
           <v-icon>mdi-logout</v-icon>
           <div>Keluar</div>
         </v-btn>

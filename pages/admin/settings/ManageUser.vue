@@ -46,39 +46,41 @@
             </v-row>
         </v-card>
         <v-card class="mt-3 pa-4">
-            <v-row class="d-flex justify-start">
-                <v-col cols="12" md="3">
-                    <v-checkbox
-                    label="Ahmad Zaid"
-                    color="#44444"></v-checkbox>
-                </v-col>
-                <v-col cols="12" md="2" class="mt-5">
-                   <p>01/01/2022</p> 
-                </v-col>
-                <v-col cols="12" md="2" class="mt-5">
-                    <p>name@gmail.com</p>
-                </v-col>
-                <v-col cols="12" md="2" class="mt-5">
-                    <p>3375920894810001</p>
-                </v-col>
-                <v-col cols="12" md="2" class="mt-5">
-                    <v-avatar
-                    color="indigo"
-                    size="36"
-                    >
-                    <span class="white--text text-h5">A</span>
-                    </v-avatar>
-                    <v-avatar
-                    color="red"
-                    size="36"
-                    >
-                    <span class="white--text text-h5">J</span>
-                    </v-avatar>
-                </v-col>
-                <v-col cols="12" md="1" class="mt-5">
-                    <v-icon large>mdi-delete-outline</v-icon>
-                </v-col>
-            </v-row>
+            <div v-for="user in stateAllUsers" :key="user.id"> 
+                <v-row class="d-flex justify-start">
+                    <v-col cols="12" md="3">
+                        <v-checkbox
+                        :label="user.name"
+                        color="#44444"></v-checkbox>
+                    </v-col>
+                    <v-col cols="12" md="2" class="mt-5">
+                       <p>01/01/2022</p> 
+                    </v-col>
+                    <v-col cols="12" md="2" class="mt-5">
+                        <p>{{user.email}}</p>
+                    </v-col>
+                    <v-col cols="12" md="2" class="mt-5">
+                        <p>{{user.nik}}</p>
+                    </v-col>
+                    <v-col cols="12" md="2" class="mt-5">
+                        <v-avatar
+                        color="indigo"
+                        size="36"
+                        >
+                        <span class="white--text text-h5">A</span>
+                        </v-avatar>
+                        <v-avatar
+                        color="red"
+                        size="36"
+                        >
+                        <span class="white--text text-h5">J</span>
+                        </v-avatar>
+                    </v-col>
+                    <v-col cols="12" md="1" class="mt-5">
+                        <v-icon large>mdi-delete-outline</v-icon>
+                    </v-col>
+                </v-row>
+            </div>
         </v-card>
         <div class="mt-6 float-right">
             <v-pagination
@@ -91,13 +93,29 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
     name: 'ManageUser',
     layout: 'adminLayout',
+    computed: {
+        stateAllUsers() {
+            return this.$store.state.admins.users
+        }
+    },
     data () {
       return {
         page: 1,
+        users: [],
       }
     },
+    mounted() {
+        this.getUsers()
+    },
+    methods: {
+        ...mapActions({
+            getUsers: 'admins/handleAllUsers'
+        }),
+    }
 }
 </script>

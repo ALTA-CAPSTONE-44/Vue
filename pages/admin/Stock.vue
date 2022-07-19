@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col class="d-flex overflow-x-auto">
+      <v-col class="gap d-flex overflow-x-auto">
           <CardStockVaksin />
           <CardStockVaksin2 vaksin="240" img="/img/Sinovac Vaksin.png" />
           <CardStockVaksin2 vaksin="200" img="/img/Astrazeneca Vaksin.png" />
