@@ -10,7 +10,7 @@
       class="ml-3 mr-3"
     >
 
-      <v-btn text :style="`font-size:20px; color: ${this.registerd};`" to="/admin/action/Registerd" >
+     <v-btn text :style="`font-size:20px; color: ${this.registerd};`" to="/admin/action/Registerd" >
         Registerd
       </v-btn>
       <v-btn text :style="`font-size:20px; color: ${this.waiting};`" to="/admin/action/Waiting" >
@@ -75,7 +75,7 @@
           <td class="text-center">{{ item.vaksin }}</td>
           <td class="text-center">{{ item.jumlah }}</td>
           <td class="text-center">{{item.dosis}}</td>
-          <td class="text-center"><v-btn :color="item.color" dark>Registered</v-btn></td>
+          <td class="text-center"><v-btn :color="item.color" dark>Completed</v-btn></td>
 
         </tr>
       </tbody>
@@ -110,10 +110,10 @@
 export default {
   layout: "adminLayout",
       data: () => ({
-        registerd: 'black',
+        registered: 'black',
         waiting: 'black' ,
         session: [],
-        complated: 'black',
+        completed: 'black',
              vaksin: [
           {
             date: 'P-GZ7TBCM1',
@@ -180,8 +180,8 @@ export default {
     methods: {
       changeColorRegister(){
         this.registerd = 'black';
-        this.waiting = '#A6A6A6';
-        this.complated = '#A6A6A6';
+        this.waiting = 'black';
+        this.completed = 'black';
       },
     async getAllsession() {
     const session = await this.$store.dispatch("auth/getAllsession");
