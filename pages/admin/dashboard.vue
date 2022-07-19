@@ -101,10 +101,18 @@
 <script>
 import AppBar from '~/components/core/AppBar.vue'
 import Vaksinbooking from '../vaksinbooking.vue'
+import { mapActions } from 'vuex'
+
 export default {
+  computed: {
+        stateAllUsers() {
+            return this.$store.state.admins.users
+        }
+    },
   data () {
     return {
       session: [],
+      users: this.stateAllUsers,
     }
   },
   components: { AppBar, Vaksinbooking },
@@ -114,16 +122,18 @@ export default {
         this.token = localStorage.getItem('token')?localStorage.getItem('token'):null
       if(!this.token){
              this.$router.push("/admin/login");
-
-
     }
+    this.getUsers()
   },
   methods:{
     async getAllsession() {
     const session = await this.$store.dispatch("auth/getAllsession");
     console.log("session dari method: ", session)
     this.session = session
-  }  
+  },
+  ...mapActions({
+            getUsers: 'admins/handleAllUsers'
+        }),  
   }
 }
 </script>

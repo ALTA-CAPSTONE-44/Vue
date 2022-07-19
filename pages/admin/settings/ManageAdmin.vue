@@ -93,7 +93,7 @@
                                 <v-btn
                                     color="primary"
                                     text
-                                    @click="deleteItem(item)"
+                                    @click="deleteItem()"
                                 >
                                     Confirm
                                 </v-btn>
@@ -139,8 +139,7 @@ export default {
         ...mapActions({
             getAdmins: 'admins/handleAllAdmins'
         }),
-        createItem(item){
-            this.$emit('deleteItem', item);
+        deleteItem(){
             this.dialog = false;
         }
     },

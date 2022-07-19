@@ -45,8 +45,8 @@
                 </v-col>
             </v-row>
         </v-card>
-        <v-card class="mt-3 pa-4">
             <div v-for="user in stateAllUsers" :key="user.id"> 
+        <v-card class="mt-3 pa-4">
                 <v-row class="d-flex justify-start">
                     <v-col cols="12" md="3">
                         <v-checkbox
@@ -80,8 +80,8 @@
                         <v-icon large>mdi-delete-outline</v-icon>
                     </v-col>
                 </v-row>
-            </div>
         </v-card>
+            </div>
         <div class="mt-6 float-right">
             <v-pagination
             v-model="page"

@@ -32,7 +32,7 @@
     <template v-slot:append>
       <div class="pa-8">
         <img src="/img/profile.png" >
-        <div>Ahmad Alfian</div>
+        <div>Ahmad Zaid</div>
         <div class="text-sm">Admin RS Sultan Haldirin</div>
         <v-btn to="/admin/login" class="mt-8 align-items-center" rounded outlined color="#0FE0CB">
           <v-icon>mdi-logout</v-icon>
